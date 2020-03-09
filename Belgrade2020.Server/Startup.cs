@@ -46,9 +46,7 @@ namespace Belgrade2020.Server
             }
 
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
