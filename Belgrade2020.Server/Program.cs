@@ -28,6 +28,7 @@ namespace Belgrade2020.Server
                     rollingInterval: RollingInterval.Hour,
                     rollOnFileSizeLimit: true,
                     shared: true)
+                .WriteTo.Seq(@"http://localhost:5341/")
                 .CreateLogger();
 
             CreateHostBuilder(args).Build().Run();
